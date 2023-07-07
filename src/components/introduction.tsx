@@ -5,48 +5,29 @@ import { Button } from "./button";
 // <h2 className="text-6xl text-[#FF817E] ">Personal hairstyle</h2>
 
 export function Introduction() {
-
-    return (
-        <section className="flex h-screen relative overflow-hidden">
-    
-            <div className=" w-2/4 bg-slate-100  text-center justify-center pt-48 flex-col" >
-                <h1 className="pt-8 text-7xl  ">Marcos,</h1>
-                <h2 className="text-7xl font-bold text-[#48B7EC] ">Personal hairstyle</h2>
-                {/* <div className=" bg-[#FFE45E] ">
-                    <p className="text-3xl text-black ">Melhore sua</p>
-                    <p className="text-3xl text-black ">altoestima</p>
-                </div> */}
-                
-                <div className="flex justify-center pt-6">
-                    <div className="p-2">
-                        <Button mensage="Agende agora seu horário" color="bg-[#FFE45E]"/>
-                    </div>
-
-                </div>
-            </div>
-            <div className="  w-2/4  bg-slate-100  " >
-                <Image
-                    priority
-                    src="/svg/blob4.svg"
-                    width={4000}
-                    height={4000}
-                    alt="Fundo da foto"
-                    className="absolute left-1/4 "
-                />
-                <Image
-                    priority
-                    src="/images/NovoCabeloTransparente.png"
-                    width={750}
-                    height={750}
-                    alt="Foto modelo"
-                    className="absolute left-2/4"
-                    />
-      
-            </div>
-
-                
-            
-        </section>
-        
-    )
+  return (
+    <section className="flex flex-col text-center  bg-background">
+      <div className="p-12 text-7xl justify-center ">
+        <h1 className="">Tudo para o seu</h1>
+        <h1 className="text-accent">Melhor</h1>
+      </div>
+      <div className="">
+        <Button color="bg-accent" mensage="Marque agora o seu horário!" />
+      </div>
+      <div className="flex m-4 ">
+        <ul className=" justify-normal text-left   list-disc m-4 marker:text-accent">
+          <li className=" py-5 text-textBody">
+            Marcos é um cabeleireiro focado no bem estar de seus clientes.
+          </li>
+          <li className=" py-5 text-textBody">
+            Profissional especializado e pronto para os cuidados que você
+            merece.
+          </li>
+          <li className=" py-5 text-textBody">
+            Trabalha com os melhores produtos do mercado.
+          </li>
+        </ul>
+      </div>
+    </section>
+  );
 }
